@@ -285,7 +285,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/07/25/temp/" class="post-title-link" itemprop="url">temp</a>
+          <a href="/2023/07/25/temp/" class="post-title-link" itemprop="url">常见的dns记录</a>
         </h2>
 
         <div class="post-meta-container">
@@ -298,6 +298,13 @@
 
       <time title="创建时间：2023-07-25 15:38:45" itemprop="dateCreated datePublished" datetime="2023-07-25T15:38:45+08:00">2023-07-25</time>
     </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-07-28 16:31:49" itemprop="dateModified" datetime="2023-07-28T16:31:49+08:00">2023-07-28</time>
+    </span>
 
   
 </div>
@@ -309,7 +316,27 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          
+          <p>这里列举一下常见的dns记录，做域名解析会用到。</p>
+<ol>
+<li>A记录：访问时显示访问ipv4的内容</li>
+<li>AAAA记录：访问时显示访问ipv6的内容</li>
+<li>CNAME记录：访问时显示访问另一个域名的内容</li>
+<li>NS记录：给子域单独设置另一个名称服务器</li>
+<li>MX记录：设置邮箱服务器,优先使用优先级较小的服务器</li>
+</ol>
+<h5 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h5><ol>
+<li><p>dobug.eu.org 通过A记录指向 172.168.9.44	  表示访问“dobug.eu.org&#x2F;*”时页面显示172.168.9.44&#x2F;*，但网址显示dobug.eu.org</p>
+</li>
+<li><p>dobug.eu.org 通过AAAA记录指向 1080: 0: 0: 0: 8: 800: 200C : 417A	  表示访问“dobug.eu.org&#x2F;*”时页面显示1080: 0: 0: 0: 8: 800: 200C : 417A&#x2F;*，但网址显示dobug.eu.org</p>
+</li>
+<li><p>dobug.eu.org 通过CNAME记录指向 baidu.com	  表示访问“dobug.eu.org&#x2F;*”时页面显示baidu.com&#x2F;*，但网址显示dobug.eu.org</p>
+</li>
+<li><p>abc.dobug.eu.org 通过NS记录指向 kellen.ns.cloudflare.com	  表示abc.dobug.eu.org的名称服务器中有一项是kellen.ns.cloudflare.com</p>
+</li>
+<li><p>dobug.eu.org 通过MX记录指向 mxdomain.qq.com	  表示dobug.eu.org的邮箱服务器中有一项是mxdomain.qq.com</p>
+</li>
+</ol>
+
       
     </div>
 
