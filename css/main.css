@@ -1578,6 +1578,14 @@ pre code {
   margin-top: 40px;
   text-align: center;
 }
+.post-body p a {
+  color: #0593d3;
+  border-bottom: none;
+}
+.post-body p a:hover {
+  color: #ff106c;
+  text-decoration: underline;
+}
 .use-motion .post-block,
 .use-motion .pagination,
 .use-motion .comments {
@@ -2555,7 +2563,7 @@ header.header {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #b1ff6a;
+  background: #36ffff;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
